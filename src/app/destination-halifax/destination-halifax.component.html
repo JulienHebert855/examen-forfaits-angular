@@ -1,0 +1,8 @@
+<div class="container">
+    <h2>Forfaits à destinatoin de Halifax</h2>
+    <div class="flex-container items1">
+        <div *ngFor="let forfait of forfaits | halifax">
+            <app-forfait-complet [forfait]="forfait"></app-forfait-complet>
+        </div>
+    </div>
+</div>
