@@ -1,0 +1,63 @@
+<div class="container">
+    <h1>Gestion des forfaits</h1>
+
+    <div>
+        <h2>Ajout d'un forfait</h2>
+        <form #forfaitFormAjout="ngForm" id="forfaitFormAjout" (ngSubmit)="onAdd(tableForfaits, forfaitFormAjout);">
+            <mat-form-field class="input-full-width">
+                <input type="text" name="nom" required minlength="2" maxlength="50" [(ngModel)]="newForfait.destination"
+                    matInput #nom="ngModel" placeholder="Nouveau forfait">
+                <button matSuffix type="submit" mat-icon-button color="primary"
+                    [disabled]="!forfaitFormAjout.form.valid"><i class="material-icons">add</i></button>
+                <mat-error *ngIf="nom.invalid && (nom.dirty || nom.touched) && nom.hasError('required')">Le nom est
+                    obligatoire.</mat-error>
+                <mat-error *ngIf="nom.invalid && (nom.dirty || nom.touched) && nom.hasError('minlength')">Le nom doit
+                    contenir au moins 2 caractères.</mat-error>
+                <mat-error *ngIf="nom.invalid && (nom.dirty || nom.touched) && nom.hasError('maxlength')">Le nom doit
+                    contenir au maximum 50 caractères.</mat-error>
+            </mat-form-field>
+        </form>
+    </div>
+
+    <h2>Liste des forfaits</h2>
+    <table mat-table #tableForfaits [dataSource]="forfaits">
+
+        <ng-container matColumnDef="destination">
+            <th mat-header-cell *matHeaderCellDef> Destination </th>
+            <td mat-cell *matCellDef="let forfait"> {{forfait.destination}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="villeDepart">
+            <th mat-header-cell *matHeaderCellDef> Ville de départ </th>
+            <td mat-cell *matCellDef="let forfait"> {{forfait.villeDepart}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="dateDepart">
+            <th mat-header-cell *matHeaderCellDef> Date de départ </th>
+            <td mat-cell *matCellDef="let forfait"> {{forfait.dateDepart}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="dateRetour">
+            <th mat-header-cell *matHeaderCellDef> Date de retour </th>
+            <td mat-cell *matCellDef="let forfait"> {{forfait.dateRetour}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="prix">
+            <th mat-header-cell *matHeaderCellDef> Prix régulier </th>
+            <td mat-cell *matCellDef="let forfait"> {{forfait.prix}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="rabais">
+            <th mat-header-cell *matHeaderCellDef> Prix en rabais </th>
+            <td mat-cell *matCellDef="let forfait"> {{forfait.rabais}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+        <tr mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></tr>
+
+
+
+    </table>
+
+
+</div>

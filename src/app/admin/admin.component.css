@@ -1,0 +1,5 @@
+.container                      { width: 80%; margin: auto; position: relative; top: 100px;}
+table                           { width: 100%; }
+
+.container table                { border-radius: 5px; margin-top: 10px; margin-left: 5px; margin-right: 5px; margin-bottom: 10px; background-color:linen; box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4); }
+.mat-row.cdk-row:hover          { background-color: rgb(252, 220, 189); transition: 0.1s; }
