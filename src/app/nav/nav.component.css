@@ -1,0 +1,4 @@
+span    { padding: 10px; }
+.nav    {position: fixed; top: 0; z-index: 999; background-color: aquamarine; }
+a       {text-decoration: none;}
+a:hover { color: red; }
