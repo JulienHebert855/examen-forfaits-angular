@@ -1,0 +1,18 @@
+<div>
+    <mat-card class="mini-forfait-container">
+        <mat-card-title>
+            Mini-forfait - ID: {{forfait.id}}
+        </mat-card-title>
+        <mat-card-content class="mini-forfait-items">
+            <p><strong>Destination : </strong>{{forfait.destination}}</p>
+            <p><strong>Ville de départ : </strong>{{forfait.villeDepart}}</p>
+            <p><strong>Nom de l'hôtel : </strong>{{forfait.hotel.nom}}</p>
+        </mat-card-content>
+        <mat-card-content class="mini-forfait-items">
+            <p><strong>Prix : </strong>{{forfait.rabais}} $</p>
+            <p><strong>Départ : </strong>{{forfait.dateDepart}}</p>
+            <p><strong>Date de retour : </strong>{{forfait.dateRetour}}</p>
+            <p><strong>Durée : </strong>7 jours</p>
+        </mat-card-content>
+    </mat-card>
+</div>

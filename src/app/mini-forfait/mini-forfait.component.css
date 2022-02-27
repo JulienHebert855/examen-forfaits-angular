@@ -1,0 +1,2 @@
+.mini-forfait-container                         { border-radius: 5px; margin-top: 10px; margin-left: 5px; margin-right: 5px; margin-bottom: 10px; background-color:linen;}
+.mini-forfait-container:hover                   { box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4); transition: 0.5s; }
