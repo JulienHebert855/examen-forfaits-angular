@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="vedette">
+        <h1 class="titre">Vive le Canada!</h1>
+        <h2>Forfaits vedette</h2>
+        <div class="flex-container items1">
+            <div *ngFor="let forfait of forfaits | vedette">
+                <app-mini-forfait [forfait]="forfait"></app-mini-forfait>
+            </div>
+        </div>
+    </div>
+
+    <div class="forfaits">
+        <h2>Forfaits complets</h2>
+
+        <div class="flex-container">
+            <div *ngFor="let forfait of forfaits">
+                <app-forfait-complet [forfait]="forfait"></app-forfait-complet>
+            </div>
+        </div>
+    </div>
+
+</div>
