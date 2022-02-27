@@ -1,0 +1,27 @@
+<div class="items2">
+    <mat-card class="forfait-container" [ngClass]="{'vedette':forfait.vedette==true}">
+        <mat-card-header>
+            <mat-card-title>Forfait complet - En provenance de {{forfait.villeDepart}} vers
+                {{forfait.destination}} - ID: {{forfait.id}}</mat-card-title>
+            <img mat-card-image src="../../assets/Halifax_Grand.jpg" alt="Halifax">
+        </mat-card-header>
+
+        <mat-card-content class="forfait-items">
+            <p><strong>Destination : </strong>{{forfait.destination}}</p>
+            <p><strong>Ville de départ : </strong>{{forfait.villeDepart}}</p>
+            <p><strong>Nom de l'hôtel : </strong>{{forfait.hotel.nom}} - {{forfait.hotel.nombreEtoiles}}
+                étoiles - {{forfait.hotel.nombreChambres}} chambres</p>
+            <p><strong>Adresse de l'hôtel : </strong>{{forfait.hotel.coordonnees}}</p>
+
+            <ul>
+                <li>{{forfait.hotel.caracteristiques}}</li>
+            </ul>
+
+            <p><strong>Date de départ : </strong>{{forfait.dateDepart}}</p>
+            <p><strong>Date de retour : </strong>{{forfait.dateRetour}}</p>
+            <p><strong>Durée : </strong>7 jours</p>
+            <p class="barre"><strong>Prix régulier : </strong>{{forfait.prix}} $</p>
+            <p><strong>Prix en rabais : </strong>{{forfait.rabais}} $</p>
+        </mat-card-content>
+    </mat-card>
+</div>
